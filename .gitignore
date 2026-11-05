@@ -1,0 +1,59 @@
+# ==============================================================================
+# FloodVision AI — Git Ignore Configuration
+# ==============================================================================
+
+# ------------------------------------------------------------------------------
+# Large Model Ensembles (>100MB GitHub Push Limit)
+# Note: The flagship distilled student models (444 KB & 41 KB) are COMMITTED
+# so the application runs immediately out-of-the-box!
+# ------------------------------------------------------------------------------
+*teacher*.pkl
+rf_teacher.pkl
+**/rf_teacher.pkl
+
+# ------------------------------------------------------------------------------
+# Raw Image Datasets (~215MB, 1,160 files)
+# The dataset is available on Kaggle:
+# https://www.kaggle.com/datasets/faizalkarim/flood-area-segmentation
+# Pre-calibrated demo scenes are safely included in static/samples/ & public/samples/
+# ------------------------------------------------------------------------------
+dataset/
+flood-area-segmentation/
+*.zip
+*.tar.gz
+
+# ------------------------------------------------------------------------------
+# Python Bytecode, Caches, & Environments
+# ------------------------------------------------------------------------------
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.pytest_cache/
+.ipynb_checkpoints/
+*/.ipynb_checkpoints/*
+env/
+venv/
+.venv/
+ENV/
+
+# ------------------------------------------------------------------------------
+# Node & Frontend Build Artifacts
+# ------------------------------------------------------------------------------
+node_modules/
+dist/
+dist-ssr/
+*.local
+
+# ------------------------------------------------------------------------------
+# Operating System & Logs
+# ------------------------------------------------------------------------------
+.DS_Store
+Thumbs.db
+desktop.ini
+*.log
+npm-debug.log*
+yarn-debug.log*
+.env
+.env.local
+

@@ -1,0 +1,7 @@
+Model,Features,Precision,Recall,F1 (%),IoU (%),Mean Inference Time (ms),Model Size (KB)
+KNN-T (Teacher),18-D,0.7995,0.7194,75.73,60.94,1866.48,1954.61
+RF-T (Teacher),18-D,0.8499,0.7249,78.24,64.26,249.21,196003.13
+GNB-T (Teacher),18-D,0.663,0.8415,74.16,58.94,31.95,0.8
+KNN-S Baseline,6-D,0.7077,0.6589,68.24,51.8,321.23,463.24
+RF-S Baseline,6-D,0.7494,0.7292,73.91,58.62,39.77,726.58
+GNB-S Baseline,6-D,0.6612,0.7629,70.84,54.85,16.31,0.61

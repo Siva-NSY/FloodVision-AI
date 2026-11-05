@@ -1,0 +1,7 @@
+Model,Precision,Recall,F1 (%),IoU (%),ARI,NMI,Agreement (%),Retention (rho %)
+"KM-T (Teacher, KT=9)",0.6728,0.6502,66.13,49.4,1.0,1.0,100.0,100.0
+KM-S Baseline (k-means++),0.5971,0.7607,66.91,50.27,0.191,0.354,61.84,101.8
+KM-S_V1 (No Refine + Inherited),0.6698,0.7237,69.57,53.34,0.151,0.253,84.86,107.98
+KM-S_V2 (Refined + Inherited),0.5945,0.7603,66.73,50.07,0.19,0.352,61.63,101.35
+KM-S_V3 (No Refine + Re-estimated),0.6698,0.7237,69.57,53.34,0.151,0.253,84.86,107.98
+KM-S_V4 (Refined + Re-estimated),0.5945,0.7603,66.73,50.07,0.19,0.352,61.63,101.35

@@ -1,0 +1,3 @@
+Distillation Pair,Hard Distillation IoU (%),Soft Distillation IoU (%),Hard F1 (%),Soft F1 (%)
+KNN-T -> RF-S,60.77,60.18,75.6,75.14
+RF-T -> RF-S,59.39,60.01,74.52,75.01

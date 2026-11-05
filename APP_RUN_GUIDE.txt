@@ -1,0 +1,226 @@
+================================================================================
+FLOODVISION AI: ENVIRONMENTAL IMAGE INTELLIGENCE PLATFORM
+COMPLETE CONSUMER & DEVELOPER RUN GUIDE
+================================================================================
+Product Name: FloodVision AI
+Category: Environmental Image Intelligence Platform
+Aesthetic: Light Climate-Tech Theme (Warm White #FAFBF8 & Forest Green #18794E)
+Target Audience: Environmental Researchers, Drone Operators, & Flood Analysts
+Creator Attribution: Created by Siva | IIT Patna
+================================================================================
+
+--------------------------------------------------------------------------------
+TABLE OF CONTENTS
+--------------------------------------------------------------------------------
+1. Product Overview & Design Philosophy
+2. Option A: Quick Start (Single-Command All-in-One Web App on Port 5000)
+3. Option B: Running the Enterprise Decoupled Stack (FastAPI + Vite React)
+4. Step-by-Step Customer In-UI Workflow
+5. Visual Map Legend & Cartographic Interpretation
+6. Key Image Statistics & Spatial Distribution (Quadrants)
+7. Limitations & Technical Safeguards
+8. REST API Reference (For Drone & Edge Pipelines)
+9. Troubleshooting & FAQ
+
+================================================================================
+1. PRODUCT OVERVIEW & DESIGN PHILOSOPHY
+================================================================================
+FloodVision AI is an independent, commercial-grade environmental intelligence
+platform that turns raw aerial and terrestrial flood photography into clear,
+actionable spatial insights in milliseconds.
+
+Key Features:
+- Professional light climate-tech aesthetic (inspired by Stripe, Linear, Notion).
+- Single drag-and-drop ingestion for aerial and ground photography (JPG, PNG, WEBP).
+- 4 pre-calibrated 1-click benchmark disaster scenes (Urban, Street, Aerial, Rural).
+- Sub-50ms classical machine learning inference using distilled spatial features.
+- Factual pixel-level math: Flood coverage %, Non-flood %, and quadrant statistics.
+- Visual inspection grid: Original Photograph, Binary Mask, and Colored Overlay.
+- Clear cartographic color swatches (Sky blue water, red shorelines, neutral dry ground).
+- Direct exports: PNG binary masks, JPG overlay maps, JSON telemetry, and PDF reports.
+- Dedicated Session Insights comparison table logging every analyzed image.
+- Zero dark mode glare, zero generic AI tropes, and zero fabricated emergency alerts.
+
+================================================================================
+2. OPTION A: QUICK START (ALL-IN-ONE FLASK APPLICATION)
+================================================================================
+The fastest, most convenient way to run the entire FloodVision AI experience is
+via the standalone Flask application, which serves both the REST API and the
+complete interactive climate-tech web interface.
+
+STEP 1: Open PowerShell or Command Prompt
+Navigate to the project root directory:
+  cd "C:\Users\hp\Desktop\ml project"
+
+STEP 2: Install Python Prerequisites
+Ensure you have the required Python packages:
+  pip install -r requirements.txt
+  (Packages: flask, opencv-python, numpy, scikit-learn, joblib)
+
+STEP 3: Launch the Server
+Run the application script:
+  python app.py
+
+Output in terminal:
+  ======================================================================
+  FloodVision AI — Environmental Image Intelligence Platform
+  Local Server Active: http://127.0.0.1:5000
+  ======================================================================
+
+STEP 4: Open Your Browser
+Navigate to:
+  http://127.0.0.1:5000
+
+The web interface is fully operational immediately!
+
+================================================================================
+3. OPTION B: ENTERPRISE DECOUPLED STACK (FASTAPI + VITE REACT)
+================================================================================
+For production microservice deployment or front-end development:
+
+STEP 1: Launch FastAPI Backend (Terminal 1)
+  cd "C:\Users\hp\Desktop\ml project\FloodVision-AI\backend"
+  pip install -r requirements.txt
+  python -m uvicorn main:app --host 127.0.0.1 --port 8000 --reload
+
+STEP 2: Launch Vite React Frontend (Terminal 2)
+  cd "C:\Users\hp\Desktop\ml project\FloodVision-AI\frontend"
+  npm install
+  npm run dev
+
+STEP 3: Open Your Browser
+Navigate to:
+  http://localhost:3000
+
+(Note: To create a production production build for deployment, run `npm run build`.)
+
+================================================================================
+4. STEP-BY-STEP CUSTOMER IN-UI WORKFLOW
+================================================================================
+Step 1: Upload an Image
+- Drag any JPG, JPEG, PNG, or WEBP photograph into the dropzone box.
+- Or click "Browse Files" to choose a file from your hard drive.
+- Or click any of the 4 benchmark scene cards (Urban, Street, Aerial, Rural).
+
+Step 2: Adjust Settings (Optional)
+- Expand "Advanced Settings (Optional)" if you wish to adjust the inference model
+  or tune the sensitivity threshold (default is balanced tau = 0.50).
+
+Step 3: Click 'Analyze Image'
+- Click the prominent forest-green "Analyze Image" button.
+- Inference executes in ~40-80 milliseconds.
+
+Step 4: Inspect Insights & Export
+- Review the dynamic "Analysis Overview" factual statement.
+- Check the Key Statistics Ribbon (Coverage %, Pixels, Resolution, Latency).
+- Compare the Original, Binary Mask, and Color Overlay visualizations.
+- Review the Spatial Distribution 4-quadrant breakdown.
+- Export deliverables: Download Mask (PNG), Overlay (JPG), Incident JSON, or
+  Print / Save PDF Report.
+
+================================================================================
+5. VISUAL MAP LEGEND & CARTOGRAPHIC INTERPRETATION
+================================================================================
+The application uses clear, intuitive visual swatches:
+
+- 🔵 Sky Blue (#38bdf8): Classified Flood Water
+  Indicates pixels classified as inundated ground or standing water bodies.
+
+- 🔴 Red Contour (#ef4444): Detected Waterline Shore
+  Highlights the exact boundary separating flooded regions from dry terrain.
+
+- ⚫ Black (in Binary Mask): Non-Flood / Dry Terrain
+  Represents elevated roadways, buildings, unflooded soil, or vegetation.
+
+- ⚪ White (in Binary Mask): Identified Flood Pixels
+  Raw binary output suitable for GIS spatial mapping.
+
+================================================================================
+6. KEY IMAGE STATISTICS & SPATIAL DISTRIBUTION (QUADRANTS)
+================================================================================
+The results panel computes mathematically grounded metrics directly from the
+predicted 256x256 binary mask matrix (total 65,536 pixels):
+
+- Flood Coverage %: (flood_pixels / 65,536) * 100
+- Non-Flood Coverage %: (non_flood_pixels / 65,536) * 100 (sums to 100%)
+- Processing Latency: Wall-clock inference duration in milliseconds (sub-50ms).
+- Throughput: Calculated frames per second (FPS).
+
+Spatial Distribution (2D Image Frame Analysis):
+- Top-Left (NW) Quadrant
+- Top-Right (NE) Quadrant
+- Bottom-Left (SW) Quadrant
+- Bottom-Right (SE) Quadrant
+
+Notice: Spatial distribution metrics reflect 2D image coordinates (pixel rows
+and columns within the photograph frame), not geographic positions, ground
+elevations, or physical GPS coordinates.
+
+================================================================================
+7. LIMITATIONS & TECHNICAL SAFEGUARDS
+================================================================================
+- Flood coverage values represent the proportion of photographic pixels classified
+  as flood water by the algorithm.
+- Pixel percentages do NOT directly indicate water depth (meters) or physical
+  ground surface area (acres / hectares) without camera calibration or DSM data.
+- The platform is designed as an objective, visual intelligence aid for
+  environmental researchers and drone operators, and should not be used as the
+  sole basis for critical emergency life-safety decisions.
+
+================================================================================
+8. REST API REFERENCE (FOR DRONE & EDGE INTEGRATION)
+================================================================================
+Endpoint: POST /api/segment
+Content-Type: multipart/form-data
+
+Parameters:
+- image: (File, optional) Uploaded image file (JPG, PNG, WEBP).
+- sample_id: (String, optional) Benchmark scene ID ('sample1' to 'sample4').
+- model_choice: (String, optional) 'rf_student' (default), 'rf_teacher', 'km_student'.
+- threshold: (Float, optional) Decision boundary threshold (default: 0.50).
+
+Response Schema (JSON):
+{
+  "success": true,
+  "images": {
+    "original": "data:image/jpeg;base64,...",
+    "mask": "data:image/png;base64,...",
+    "overlay": "data:image/jpeg;base64,...",
+    "comparison": "data:image/jpeg;base64,..."
+  },
+  "analytics": {
+    "filename": "sample1.jpg",
+    "original_resolution": "256×256",
+    "processing_resolution": "256×256",
+    "total_pixels": 65536,
+    "flood_pixels": 52300,
+    "non_flood_pixels": 13236,
+    "flood_percentage": 79.8,
+    "non_flood_percentage": 20.2,
+    "summary_statement": "The model identified flood-class regions covering 79.8% (52,300 pixels)...",
+    "spatial_distribution": {
+      "quadrants": { ... },
+      "distribution_summary": "Identified flood-class pixels are distributed...",
+      "coordinate_notice": "..."
+    },
+    "processing_time_ms": 79.68,
+    "fps": 12.5,
+    "model_display_name": "FloodVision Image Segmentation Model"
+  }
+}
+
+================================================================================
+9. TROUBLESHOOTING & FAQ
+================================================================================
+Q1: The port 5000 is already in use.
+A: Terminate any process listening on 5000 or edit app.py:
+   app.run(host="127.0.0.1", port=5001)
+
+Q2: The image analysis returns 0% flood coverage.
+A: Check if the threshold sensitivity is set too high (e.g. >0.70). Lower the
+   threshold to 0.40 - 0.50 in the Advanced Settings.
+
+Q3: Can I run this offline in the field?
+A: Yes! FloodVision AI requires zero cloud connectivity. All models are stored
+   locally as joblib bundles and execute entirely on CPU without GPU requirements.
+================================================================================
