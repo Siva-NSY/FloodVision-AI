@@ -1,20 +1,14 @@
-# IIT Patna CS3103 Machine Learning Project Dependencies
-# Python 3.10+ compatible (tested on Python 3.14.4)
+# FloodVision AI Production & Core Dependencies
+# Python 3.10+ compatible
 
+flask>=3.0.0
+gunicorn>=21.2.0
 numpy>=1.24.0
 scipy>=1.10.0
 scikit-learn>=1.3.0
 pandas>=2.0.0
-opencv-python>=4.8.0
+opencv-python-headless>=4.8.0
+pillow>=10.0.0
 scikit-image>=0.21.0
 matplotlib>=3.7.0
 seaborn>=0.12.0
-jupyter>=1.0.0
-ipykernel>=6.20.0
-nbconvert>=7.0.0
-python-pptx>=0.6.21
-reportlab>=4.0.0
-kagglehub>=0.2.0
-pillow>=10.0.0
-flask>=3.0.0
-
