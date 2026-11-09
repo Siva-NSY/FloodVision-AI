@@ -8,6 +8,9 @@
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-Profile-0A66C2.svg)](https://www.linkedin.com/in/siva-yaswanth-nallangari-155902324/)
 
 ---
+<img width="1466" height="716" alt="image" src="https://github.com/user-attachments/assets/3e28610a-f45f-4c06-ba41-e8f617b30751" />
+<img width="1253" height="712" alt="image" src="https://github.com/user-attachments/assets/0f373742-3913-43d3-8374-0220ce0ef96e" />
+
 
 ## 📌 Project Overview
 
@@ -105,6 +108,7 @@ FloodVision-AI/
 ```
 
 ---
+
 
 ## 📦 Dataset Notice & Model Size
 
