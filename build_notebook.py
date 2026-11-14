@@ -52,6 +52,23 @@ We import all approved classical machine learning libraries, set random seeds, a
 
 cells.append(nbf.v4.new_code_cell("""import os
 import sys
+
+# Auto-heal: If running in Google Colab without unzipping, auto-extract colab_files.zip or fetch from GitHub
+if not os.path.exists("src"):
+    if os.path.exists("colab_files.zip"):
+        print("Auto-extracting colab_files.zip...")
+        import zipfile
+        with zipfile.ZipFile("colab_files.zip", "r") as z:
+            z.extractall(".")
+    elif os.path.exists("/content/colab_files.zip"):
+        print("Auto-extracting /content/colab_files.zip...")
+        import zipfile
+        with zipfile.ZipFile("/content/colab_files.zip", "r") as z:
+            z.extractall("/content")
+    else:
+        print("Auto-cloning src and results from GitHub...")
+        os.system("git clone https://github.com/Siva-NSY/FloodVision-AI.git repo && cp -rn repo/src repo/results repo/flood-area-segmentation . && rm -rf repo")
+
 import time
 import pickle
 import numpy as np
